@@ -3,4 +3,5 @@ import logo from './logo.png'
 
 export const assets = {
   header_img,
+  logo,
 }
