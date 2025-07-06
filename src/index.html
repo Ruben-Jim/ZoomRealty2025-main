@@ -1,229 +1,483 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZoomRealty - Hector Picon</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans text-gray-700">
-  <header class="bg-white shadow-md">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:object-scale-down flex justify-between items-center">
-      <div><img class="object-scale-down" src="assets/logo.png" alt="logo"></div>
-      <ul class="items-center flex space-x-4">
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Home</a></li>
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">The 1% Fee</a></li>
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Buyer's Fee</a></li>
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">About LJ</a></li>
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Reviews</a></li>
-        <li><a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a></li>
-        <li><button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700">Call Now</button></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="bg-blue-900 text-white py-16">
-    <div class="bg-[url('/src/assets/header_img.png')]max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-40">
-      <div class="text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">List Your <p class="underline decoration-4 decoration-orange-500 underline-offset-4">Clovis</p> Home for 1%</h1>
-        <p class="text-xl mb-6">Hire Hector Picon! Save Thousands!</p>
-        <div class="flex justify-center md:justify-start space-x-4">
-          <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">Contact LJ</button>
-          <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700" id="sellButton">Sell Now!</button>
-        </div>
-      </div>
-      <div class="w-full md:w-1/2">
-        <!--<img src="https://via.placeholder.com/300x400" alt="LJ Woodard" class="w-full h-80 object-cover rounded-lg">-->
-        <div class="">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wR_1hyXRsro?si=B-yI-RnNzllH9ymV?&autoplay=1&mute=1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
-        </div>  
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-10 bg-white">
-    <div class="flex justify-center space-x-4 mt-4">
-          <img src="https://via.placeholder.com/50" alt="Google Reviews" class="w-12 h-12">
-          <img src="https://via.placeholder.com/50" alt="Birdeye" class="w-12 h-12">
-          <img src="https://via.placeholder.com/50" alt="Zillow" class="w-12 h-12">
-        </div>
-  </section>
-  
-  <section class="py-16 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-8">LJ Woodard - Clovis's #1 Low Commission Broker</h2>
-      <div class="h-1 bg-orange-500 m-auto mb-5 space-y-0 w-[350px]"></div>
-      <div class="flex flex-col md:flex-row justify-between gap-8">
-        <div class="md:w-1/2">
-          <h3 class="text-2xl font-semibold mb-4">Sell Your Home for 1%</h3>
-          <p class="text-gray-600 mb-4">Full-service marketing to sell your home from start to finish for a 1% commission.</p>
-          <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-blue-700" id="sellButton">Sell With 1% Fee</button>
-        </div>
-        <div class="h-20 bg-orange-500 m-auto w-1 "></div>
-        <div class="md:w-1/2">
-          <h3 class="text-2xl font-semibold mb-4">Buy a Home for 1%</h3>
-          <p class="text-gray-600 mb-4">Find the perfect home and negotiate the best price with a 1% buyer's fee.</p>
-          <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Buy With 1% Fee</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="bg-blue-900 py-7"></div>  
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-11">Why Hire Hector Picon?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 content-center ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZoomRealty - Hector Picon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-gray-700">
+    <header class="bg-white shadow-md">
+      <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
         <div>
-          <div class="w-16 h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white">
-            <span class="text-xl">$</span>
-          </div>
-          <p class="text-gray-600">I beat all competitors in price. Professional photos, 3D tours, floorplan, aerial photos are included.</p>
+          <img
+            class="h-8 sm:h-10 lg:h-12 object-contain"
+            src="assets/logo.png"
+            alt="logo"
+          />
         </div>
-        <div>
-          <div class="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white">
-            <span class="text-xl">🏠</span>
-          </div>
-          <p class="text-gray-600">You hire a local agent with 15+ years of experience and hundreds of homes sold in San Diego.</p>
-        </div>
-        <div>
-          <div class="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white">
-            <span class="text-xl">🎁</span>
-          </div>
-          <p class="text-gray-600">Aggressive MLS & internet marketing.</p>
-        </div>
-        <div>
-          <div class="w-16 h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white">
-            <span class="text-xl">❌</span>
-          </div>
-          <p class="text-gray-600">Cancel anytime policy.</p>
-        </div>
-      </div>
-      <button id="sellButton" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mb-12">
-        Sell My Home
-      </button>
-    </div>
-  </section>
-
-  <section class="py-16 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-8">How Do I Compare to Traditional Agents?</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="bg-blue-900 text-white">
-              <th class="p-4">Home Sale Price</th>
-              <th class="p-4">Standard 2.5% Listing Fee</th>
-              <th class="p-4">My 1% Listing Fee</th>
-              <th class="p-4">Savings</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="p-4">$500,000</td>
-              <td class="p-4">$12,500</td>
-              <td class="p-4">$5,000</td>
-              <td class="p-4 text-green-600">$7,500</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-4">$750,000</td>
-              <td class="p-4">$18,750</td>
-              <td class="p-4">$7,500</td>
-              <td class="p-4 text-green-600">$11,250</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-4">$1,000,000</td>
-              <td class="p-4">$25,000</td>
-              <td class="p-4">$10,000</td>
-              <td class="p-4 text-green-600">$15,000</td>
-            </tr>
-            <tr class="border-b">
-              <td class="p-4">$1,500,000</td>
-              <td class="p-4">$37,500</td>
-              <td class="p-4">$15,000</td>
-              <td class="p-4 text-green-600">$22,500</td>
-            </tr>
-            <tr>
-              <td class="p-4">$2,000,000</td>
-              <td class="p-4">$50,000</td>
-              <td class="p-4">$20,000</td>
-              <td class="p-4 text-green-600">$30,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button id="listButton" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mt-8">
-        List Your Home for 1%
-      </button>
-    </div>
-  </section>
-
-  <section class="py-16 bg-blue-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-8">Work with the Top 1% Real Estate Listing Agent</h2>
-      <p class="mb-4">I provide all services for just 1%, then a traditional agent can charge less than my competitors because I am in full independent control over my commission split. I work all of my transactions from start to finish and with me directly throughout the selling process.</p>
-      <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <img src="https://via.placeholder.com/150x100" alt="Property 1" class="w-36 h-24 object-cover">
-        <img src="https://via.placeholder.com/150x100" alt="Property 2" class="w-36 h-24 object-cover">
-        <img src="https://via.placeholder.com/150x100" alt="Property 3" class="w-36 h-24 object-cover">
-        <img src="https://via.placeholder.com/150x100" alt="Property 4" class="w-36 h-24 object-cover">
-        <img src="https://via.placeholder.com/150x100" alt="Property 5" class="w-36 h-24 object-cover">
-        <img src="https://via.placeholder.com/150x100" alt="Property 6" class="w-36 h-24 object-cover">
-      </div>
-      <div class="flex justify-center gap-4">
-        <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">Check Our Review</button>
-        <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">Get In Touch</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold mb-8">Hector Picon - Clovis' #1 Low Commission Broker!</h2>
-      <div class="bg-blue-900 text-white p-6 rounded-lg max-w-md mx-auto">
-        <p class="mb-2">Understanding Full Agent Services Under 1% Discount Real Estate Brokers</p>
-        <ol class="text-left list-decimal pl-5">
-          <li>1% Listing Fee</li>
-          <li>Internet Marketing</li>
-          <li>Professional Photos & Videography</li>
-          <li>Cancel Your Listing Anytime</li>
-        </ol>
-        <p class="mt-2">This is a true low fee listing with zero hidden or extra charges/fees.</p>
-        <p>Additionally, there are no up-front payments for my services. I only pay my fee at the closing of escrow.</p>
-        <p>I will save you up to 60%+ on the listing side with aggressive front-end pricing!</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-blue-900 text-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-lg font-bold mb-4">Hector Picon</h3>
-        <p class="text-gray-300">Clovis' #1 Discount Realtor</p>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-        <ul class="text-gray-300 space-y-2 text-left">
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
+        <ul class="hidden md:flex items-center space-x-2 lg:space-x-4">
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >The 1% Fee</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >Buyer's Fee</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >About LJ</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <button
+              class="bg-red-600 text-white px-3 py-2 lg:px-4 rounded-full hover:bg-red-700 text-sm lg:text-base"
+            >
+              Call Now
+            </button>
+          </li>
         </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
-        <form class="space-y-2">
-          <input type="text" placeholder="Name" class="w-full p-2 rounded bg-gray-700 text-white">
-          <input type="email" placeholder="Email" class="w-full p-2 rounded bg-gray-700 text-white">
-          <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Submit</button>
-        </form>
-      </div>
-    </div>
-    <p class="text-center text-gray-300 mt-8">© 2025 LJ Woodard. All rights reserved.</p>
-  </footer>
+        <button
+          class="md:hidden bg-red-600 text-white px-3 py-2 rounded-full hover:bg-red-700 text-sm"
+        >
+          Menu
+        </button>
+      </nav>
+    </header>
 
-  <script src="script.js"></script>
-</body>
+    <section class="bg-blue-900 text-white py-8 sm:py-12 lg:py-16">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20"
+      >
+        <div class="text-center lg:text-left flex-1">
+          <h1
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+          >
+            List Your
+            <span
+              class="underline decoration-4 decoration-orange-500 underline-offset-4"
+              >Clovis</span
+            >
+            Home for 1%
+          </h1>
+          <p class="text-lg sm:text-xl mb-6">
+            Hire Hector Picon! Save Thousands!
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
+          >
+            <button
+              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
+            >
+              Contact LJ
+            </button>
+            <button
+              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
+              id="sellButton"
+            >
+              Sell Now!
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex-1">
+          <div class="relative aspect-video">
+            <iframe
+              class="w-full h-full rounded-lg"
+              src="https://www.youtube-nocookie.com/embed/wR_1hyXRsro?si=B-yI-RnNzllH9ymV?&autoplay=1&mute=1&amp;controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-white">
+      <div class="flex justify-center space-x-4 mt-4">
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Google Reviews"
+          class="w-12 h-12"
+        />
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Birdeye"
+          class="w-12 h-12"
+        />
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Zillow"
+          class="w-12 h-12"
+        />
+      </div>
+    </section>
+
+    <section class="py-8 sm:py-12 lg:py-16 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
+          LJ Woodard - Clovis's #1 Low Commission Broker
+        </h2>
+        <div class="h-1 bg-orange-500 m-auto mb-5 w-48 sm:w-64 lg:w-80"></div>
+        <div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
+          <div class="lg:w-1/2">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">
+              Sell Your Home for 1%
+            </h3>
+            <p class="text-gray-600 mb-6 text-sm sm:text-base">
+              Full-service marketing to sell your home from start to finish for
+              a 1% commission.
+            </p>
+            <button
+              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
+              id="sellButton"
+            >
+              Sell With 1% Fee
+            </button>
+          </div>
+          <div class="hidden lg:block h-20 bg-orange-500 w-1 mx-auto"></div>
+          <div class="lg:w-1/2">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">
+              Buy a Home for 1%
+            </h3>
+            <p class="text-gray-600 mb-6 text-sm sm:text-base">
+              Find the perfect home and negotiate the best price with a 1%
+              buyer's fee.
+            </p>
+            <button
+              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
+            >
+              Buy With 1% Fee
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bg-blue-900 py-7"></div>
+    <section class="py-8 sm:py-12 lg:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-11">
+          Why Hire Hector Picon?
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 sm:mb-12"
+        >
+          <div class="px-4">
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
+            >
+              <span class="text-lg sm:text-xl">$</span>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base">
+              I beat all competitors in price. Professional photos, 3D tours,
+              floorplan, aerial photos are included.
+            </p>
+          </div>
+          <div class="px-4">
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
+            >
+              <span class="text-lg sm:text-xl">🏠</span>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base">
+              You hire a local agent with 15+ years of experience and hundreds
+              of homes sold in San Diego.
+            </p>
+          </div>
+          <div class="px-4">
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
+            >
+              <span class="text-lg sm:text-xl">🎁</span>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Aggressive MLS & internet marketing.
+            </p>
+          </div>
+          <div class="px-4">
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
+            >
+              <span class="text-lg sm:text-xl">❌</span>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Cancel anytime policy.
+            </p>
+          </div>
+        </div>
+        <button
+          id="sellButton"
+          class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mb-8 sm:mb-12 w-full sm:w-auto"
+        >
+          Sell My Home
+        </button>
+      </div>
+    </section>
+
+    <section class="py-8 sm:py-12 lg:py-16 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
+          How Do I Compare to Traditional Agents?
+        </h2>
+        <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+          <table class="w-full text-left border-collapse min-w-full">
+            <thead>
+              <tr class="bg-blue-900 text-white">
+                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
+                  Home Sale Price
+                </th>
+                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
+                  Standard 2.5% Fee
+                </th>
+                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
+                  My 1% Fee
+                </th>
+                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
+                  Savings
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-xs sm:text-sm lg:text-base">
+              <tr class="border-b bg-white hover:bg-gray-50">
+                <td class="p-2 sm:p-3 lg:p-4 font-medium">$500,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$12,500</td>
+                <td class="p-2 sm:p-3 lg:p-4">$5,000</td>
+                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
+                  $7,500
+                </td>
+              </tr>
+              <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                <td class="p-2 sm:p-3 lg:p-4 font-medium">$750,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$18,750</td>
+                <td class="p-2 sm:p-3 lg:p-4">$7,500</td>
+                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
+                  $11,250
+                </td>
+              </tr>
+              <tr class="border-b bg-white hover:bg-gray-50">
+                <td class="p-2 sm:p-3 lg:p-4 font-medium">$1,000,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$25,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$10,000</td>
+                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
+                  $15,000
+                </td>
+              </tr>
+              <tr class="border-b bg-gray-50 hover:bg-gray-100">
+                <td class="p-2 sm:p-3 lg:p-4 font-medium">$1,500,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$37,500</td>
+                <td class="p-2 sm:p-3 lg:p-4">$15,000</td>
+                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
+                  $22,500
+                </td>
+              </tr>
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="p-2 sm:p-3 lg:p-4 font-medium">$2,000,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$50,000</td>
+                <td class="p-2 sm:p-3 lg:p-4">$20,000</td>
+                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
+                  $30,000
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button
+          id="listButton"
+          class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mt-6 sm:mt-8 w-full sm:w-auto"
+        >
+          List Your Home for 1%
+        </button>
+      </div>
+    </section>
+
+    <section class="py-16 bg-blue-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">
+          Work with the Top 1% Real Estate Listing Agent
+        </h2>
+        <p class="mb-4">
+          I provide all services for just 1%, then a traditional agent can
+          charge less than my competitors because I am in full independent
+          control over my commission split. I work all of my transactions from
+          start to finish and with me directly throughout the selling process.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 1"
+            class="w-36 h-24 object-cover"
+          />
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 2"
+            class="w-36 h-24 object-cover"
+          />
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 3"
+            class="w-36 h-24 object-cover"
+          />
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 4"
+            class="w-36 h-24 object-cover"
+          />
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 5"
+            class="w-36 h-24 object-cover"
+          />
+          <img
+            src="https://via.placeholder.com/150x100"
+            alt="Property 6"
+            class="w-36 h-24 object-cover"
+          />
+        </div>
+        <div class="flex justify-center gap-4">
+          <button
+            class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700"
+          >
+            Check Our Review
+          </button>
+          <button
+            class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700"
+          >
+            Get In Touch
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-8">
+          Hector Picon - Clovis' #1 Low Commission Broker!
+        </h2>
+        <div class="bg-blue-900 text-white p-6 rounded-lg max-w-md mx-auto">
+          <p class="mb-2">
+            Understanding Full Agent Services Under 1% Discount Real Estate
+            Brokers
+          </p>
+          <ol class="text-left list-decimal pl-5">
+            <li>1% Listing Fee</li>
+            <li>Internet Marketing</li>
+            <li>Professional Photos & Videography</li>
+            <li>Cancel Your Listing Anytime</li>
+          </ol>
+          <p class="mt-2">
+            This is a true low fee listing with zero hidden or extra
+            charges/fees.
+          </p>
+          <p>
+            Additionally, there are no up-front payments for my services. I only
+            pay my fee at the closing of escrow.
+          </p>
+          <p>
+            I will save you up to 60%+ on the listing side with aggressive
+            front-end pricing!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-6 sm:py-8 lg:py-12">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+      >
+        <div class="text-center sm:text-left">
+          <h3 class="text-lg lg:text-xl font-bold mb-4">Hector Picon</h3>
+          <p class="text-gray-300 text-sm lg:text-base">
+            Clovis' #1 Discount Realtor
+          </p>
+        </div>
+        <div class="text-center sm:text-left">
+          <h3 class="text-lg lg:text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="text-gray-300 space-y-2 text-sm lg:text-base">
+            <li>
+              <a href="#" class="hover:text-white transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sm:col-span-2 lg:col-span-1">
+          <h3
+            class="text-lg lg:text-xl font-bold mb-4 text-center sm:text-left"
+          >
+            Contact Us
+          </h3>
+          <form class="space-y-3">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full p-2 sm:p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-sm lg:text-base"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full p-2 sm:p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-sm lg:text-base"
+            />
+            <button
+              type="submit"
+              class="bg-red-600 text-white px-4 py-2 sm:py-3 rounded hover:bg-red-700 w-full sm:w-auto text-sm lg:text-base"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-6 sm:mt-8 pt-4 sm:pt-6">
+        <p class="text-center text-gray-300 text-xs sm:text-sm">
+          © 2025 LJ Woodard. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
