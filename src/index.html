@@ -2,482 +2,994 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZoomRealty - Hector Picon</title>
-    <!-- Tailwind CSS CDN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZoomRealty 2025 • Hector Picon</title>
+    <script>
+      tailwind = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: "#0f172a",
+              ocean: "#0ea5e9",
+              coral: "#f97316",
+              blush: "#f43f5e",
+            },
+            fontFamily: {
+              display: ["Poppins", "ui-sans-serif", "system-ui"],
+              body: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+            boxShadow: {
+              glow: "0 25px 60px -25px rgba(14,165,233,0.35)",
+            },
+            backgroundImage: {
+              "grid-gradient":
+                "linear-gradient(135deg, rgba(148,163,184,0.15) 0%, rgba(15,23,42,0.2) 100%)",
+            },
+          },
+        },
+      };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="font-sans text-gray-700">
-    <header class="bg-white shadow-md">
-      <nav
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+  <body class="bg-slate-950 text-slate-100 font-body antialiased">
+    <div class="relative isolate overflow-hidden">
+      <div
+        class="pointer-events-none absolute inset-x-0 -top-48 flex justify-center blur-3xl"
+        aria-hidden="true"
       >
-        <div>
-          <img
-            class="h-8 sm:h-10 lg:h-12 object-contain"
-            src="assets/logo.png"
-            alt="logo"
-          />
-        </div>
-        <ul class="hidden md:flex items-center space-x-2 lg:space-x-4">
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
-              >Home</a
+        <div
+          class="aspect-[2000/600] w-[72rem] bg-gradient-to-tr from-ocean via-blush to-coral opacity-40"
+          style="clip-path: polygon(12% 22%, 88% 14%, 100% 44%, 88% 86%, 12% 74%, 0% 48%)"
+        ></div>
+      </div>
+
+      <header
+        class="sticky top-0 z-40 border-b border-white/5 bg-slate-950/75 backdrop-blur-xl"
+      >
+        <nav
+          class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-8"
+          aria-label="Primary"
+        >
+          <a href="#hero" class="flex items-center gap-3">
+            <img
+              src="assets/logo.png"
+              alt="ZoomRealty"
+              class="h-10 w-auto"
+            />
+            <span class="hidden text-lg font-semibold tracking-tight sm:block"
+              >ZoomRealty</span
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
-              >The 1% Fee</a
+          </a>
+          <div class="hidden items-center gap-8 text-sm font-medium lg:flex">
+            <a class="transition hover:text-white" href="#experience"
+              >Experience</a
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
-              >Buyer's Fee</a
+            <a class="transition hover:text-white" href="#how-it-works"
+              >How it works</a
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
-              >About LJ</a
+            <a class="transition hover:text-white" href="#featured"
+              >Featured homes</a
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+            <a class="transition hover:text-white" href="#testimonials"
               >Reviews</a
             >
-          </li>
-          <li>
+            <a class="transition hover:text-white" href="#contact">Contact</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              class="hidden rounded-full border border-white/20 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white transition hover:border-white/40 hover:bg-white/10 lg:block"
+              data-cta="consult"
+              type="button"
+            >
+              Book a consult
+            </button>
+            <button
+              class="inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-coral via-blush to-ocean px-4 py-2 text-sm font-semibold uppercase tracking-widest text-white shadow-glow transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white lg:px-5"
+              data-cta="call"
+              type="button"
+            >
+              Call Hector
+            </button>
+            <button
+              class="inline-flex items-center justify-center rounded-full border border-white/10 p-2 text-slate-100 transition hover:border-white/40 lg:hidden"
+              data-toggle="mobile-menu"
+              type="button"
+              aria-label="Open menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 5.25h16.5m-16.5 6h16.5m-16.5 6h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+        <div
+          class="hidden border-t border-white/5 bg-slate-950/95 px-6 py-6 backdrop-blur lg:hidden"
+          data-section="mobile-menu"
+        >
+          <div class="space-y-3 text-sm font-medium">
             <a
-              href="#"
-              class="text-gray-600 hover:text-gray-900 font-medium text-sm lg:text-base"
+              class="block rounded-lg bg-white/5 px-4 py-3 transition hover:bg-white/10"
+              href="#experience"
+              >Experience</a
+            >
+            <a
+              class="block rounded-lg bg-white/5 px-4 py-3 transition hover:bg-white/10"
+              href="#how-it-works"
+              >How it works</a
+            >
+            <a
+              class="block rounded-lg bg-white/5 px-4 py-3 transition hover:bg-white/10"
+              href="#featured"
+              >Featured homes</a
+            >
+            <a
+              class="block rounded-lg bg-white/5 px-4 py-3 transition hover:bg-white/10"
+              href="#testimonials"
+              >Reviews</a
+            >
+            <a
+              class="block rounded-lg bg-white/5 px-4 py-3 transition hover:bg-white/10"
+              href="#contact"
               >Contact</a
             >
-          </li>
-          <li>
+          </div>
+          <div class="mt-5 flex flex-col gap-3">
             <button
-              class="bg-red-600 text-white px-3 py-2 lg:px-4 rounded-full hover:bg-red-700 text-sm lg:text-base"
+              class="rounded-full border border-white/10 px-4 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-white/10"
+              data-cta="consult"
+              type="button"
             >
-              Call Now
+              Book a consult
             </button>
-          </li>
-        </ul>
-        <button
-          class="md:hidden bg-red-600 text-white px-3 py-2 rounded-full hover:bg-red-700 text-sm"
-        >
-          Menu
-        </button>
-      </nav>
-    </header>
+            <button
+              class="rounded-full bg-gradient-to-r from-coral via-blush to-ocean px-4 py-3 text-sm font-semibold uppercase tracking-widest text-white shadow-glow transition hover:opacity-90"
+              data-cta="call"
+              type="button"
+            >
+              Call Hector
+            </button>
+          </div>
+        </div>
+      </header>
 
-    <section class="bg-blue-900 text-white py-8 sm:py-12 lg:py-16">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20"
-      >
-        <div class="text-center lg:text-left flex-1">
-          <h1
-            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-          >
-            List Your
+      <main>
+        <section
+          id="hero"
+          class="relative mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-24 sm:pt-28 lg:flex-row lg:items-center lg:gap-20 lg:px-8"
+        >
+          <div class="flex-1 space-y-8">
             <span
-              class="underline decoration-4 decoration-orange-500 underline-offset-4"
-              >Clovis</span
+              class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80"
             >
-            Home for 1%
-          </h1>
-          <p class="text-lg sm:text-xl mb-6">
-            Hire Hector Picon! Save Thousands!
-          </p>
-          <div
-            class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
-          >
-            <button
-              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
+              Trusted • Clovis & Greater Fresno
+            </span>
+            <h1
+              class="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.4rem]"
             >
-              Contact Hector
-            </button>
-            <button
-              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
-              id="sellButton"
-            >
-              Sell Now!
-            </button>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/2 flex-1">
-          <div class="relative aspect-video">
-            <iframe
-              class="w-full h-full rounded-lg"
-              src="https://www.youtube-nocookie.com/embed/wR_1hyXRsro?si=B-yI-RnNzllH9ymV?&autoplay=1&mute=1&amp;controls=0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-10 bg-white">
-      <div class="flex justify-center space-x-4 mt-4">
-        <img
-          src="https://via.placeholder.com/50"
-          alt="Google Reviews"
-          class="w-12 h-12"
-        />
-        <img
-          src="https://via.placeholder.com/50"
-          alt="Birdeye"
-          class="w-12 h-12"
-        />
-        <img
-          src="https://via.placeholder.com/50"
-          alt="Zillow"
-          class="w-12 h-12"
-        />
-      </div>
-    </section>
-
-    <section class="py-8 sm:py-12 lg:py-16 bg-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
-          Hector Picon - Clovis's #1 Low Commission Broker
-        </h2>
-        <div class="h-1 bg-orange-500 m-auto mb-5 w-48 sm:w-64 lg:w-80"></div>
-        <div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
-          <div class="lg:w-1/2">
-            <h3 class="text-xl sm:text-2xl font-semibold mb-4">
-              Sell Your Home for 1%
-            </h3>
-            <p class="text-gray-600 mb-6 text-sm sm:text-base">
-              Full-service marketing to sell your home from start to finish for
-              a 1% commission.
+              Sell smarter with the 2025 playbook for premium real estate
+              experiences.
+            </h1>
+            <p class="max-w-xl text-base text-slate-300 sm:text-lg">
+              Hector Picon combines streamlined 1% listing fees, cinematic
+              marketing, and data-backed pricing to outpace traditional
+              agents—without compromising service.
             </p>
-            <button
-              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
-              id="sellButton"
-            >
-              Sell With 1% Fee
-            </button>
-          </div>
-          <div class="hidden lg:block h-20 bg-orange-500 w-1 mx-auto"></div>
-          <div class="lg:w-1/2">
-            <h3 class="text-xl sm:text-2xl font-semibold mb-4">
-              Buy a Home for 1%
-            </h3>
-            <p class="text-gray-600 mb-6 text-sm sm:text-base">
-              Find the perfect home and negotiate the best price with a 1%
-              buyer's fee.
-            </p>
-            <button
-              class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 w-full sm:w-auto"
-            >
-              Buy With 1% Fee
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="bg-blue-900 py-7"></div>
-    <section class="py-8 sm:py-12 lg:py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-11">
-          Why Hire Hector Picon?
-        </h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 sm:mb-12"
-        >
-          <div class="px-4">
             <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
+              class="flex flex-col items-start gap-3 sm:flex-row sm:items-center"
             >
-              <span class="text-lg sm:text-xl">$</span>
-            </div>
-            <p class="text-gray-600 text-sm sm:text-base">
-              I beat all competitors in price. Professional photos, 3D tours,
-              floorplan, aerial photos are included.
-            </p>
-          </div>
-          <div class="px-4">
-            <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
-            >
-              <span class="text-lg sm:text-xl">🏠</span>
-            </div>
-            <p class="text-gray-600 text-sm sm:text-base">
-              You hire a local agent with 15+ years of experience and hundreds
-              of homes sold in San Diego.
-            </p>
-          </div>
-          <div class="px-4">
-            <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
-            >
-              <span class="text-lg sm:text-xl">🎁</span>
-            </div>
-            <p class="text-gray-600 text-sm sm:text-base">
-              Aggressive MLS & internet marketing.
-            </p>
-          </div>
-          <div class="px-4">
-            <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-red-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white"
-            >
-              <span class="text-lg sm:text-xl">❌</span>
-            </div>
-            <p class="text-gray-600 text-sm sm:text-base">
-              Cancel anytime policy.
-            </p>
-          </div>
-        </div>
-        <button
-          id="sellButton"
-          class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mb-8 sm:mb-12 w-full sm:w-auto"
-        >
-          Sell My Home
-        </button>
-      </div>
-    </section>
-
-    <section class="py-8 sm:py-12 lg:py-16 bg-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">
-          How Do I Compare to Traditional Agents?
-        </h2>
-        <div class="overflow-x-auto bg-white rounded-lg shadow-md">
-          <table class="w-full text-left border-collapse min-w-full">
-            <thead>
-              <tr class="bg-blue-900 text-white">
-                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
-                  Home Sale Price
-                </th>
-                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
-                  Standard 2.5% Fee
-                </th>
-                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
-                  My 1% Fee
-                </th>
-                <th class="p-2 sm:p-3 lg:p-4 text-xs sm:text-sm lg:text-base">
-                  Savings
-                </th>
-              </tr>
-            </thead>
-            <tbody class="text-xs sm:text-sm lg:text-base">
-              <tr class="border-b bg-white hover:bg-gray-50">
-                <td class="p-2 sm:p-3 lg:p-4 font-medium">$500,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$12,500</td>
-                <td class="p-2 sm:p-3 lg:p-4">$5,000</td>
-                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
-                  $7,500
-                </td>
-              </tr>
-              <tr class="border-b bg-gray-50 hover:bg-gray-100">
-                <td class="p-2 sm:p-3 lg:p-4 font-medium">$750,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$18,750</td>
-                <td class="p-2 sm:p-3 lg:p-4">$7,500</td>
-                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
-                  $11,250
-                </td>
-              </tr>
-              <tr class="border-b bg-white hover:bg-gray-50">
-                <td class="p-2 sm:p-3 lg:p-4 font-medium">$1,000,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$25,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$10,000</td>
-                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
-                  $15,000
-                </td>
-              </tr>
-              <tr class="border-b bg-gray-50 hover:bg-gray-100">
-                <td class="p-2 sm:p-3 lg:p-4 font-medium">$1,500,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$37,500</td>
-                <td class="p-2 sm:p-3 lg:p-4">$15,000</td>
-                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
-                  $22,500
-                </td>
-              </tr>
-              <tr class="bg-white hover:bg-gray-50">
-                <td class="p-2 sm:p-3 lg:p-4 font-medium">$2,000,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$50,000</td>
-                <td class="p-2 sm:p-3 lg:p-4">$20,000</td>
-                <td class="p-2 sm:p-3 lg:p-4 text-green-600 font-semibold">
-                  $30,000
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <button
-          id="listButton"
-          class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 mt-6 sm:mt-8 w-full sm:w-auto"
-        >
-          List Your Home for 1%
-        </button>
-      </div>
-    </section>
-
-    <section class="py-16 bg-blue-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold mb-8">
-          Work with the Top 1% Real Estate Listing Agent
-        </h2>
-        <p class="mb-4">
-          I provide all services for just 1%, then a traditional agent can
-          charge less than my competitors because I am in full independent
-          control over my commission split. I work all of my transactions from
-          start to finish and with me directly throughout the selling process.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-4">
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 1"
-            class="w-36 h-24 object-cover"
-          />
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 2"
-            class="w-36 h-24 object-cover"
-          />
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 3"
-            class="w-36 h-24 object-cover"
-          />
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 4"
-            class="w-36 h-24 object-cover"
-          />
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 5"
-            class="w-36 h-24 object-cover"
-          />
-          <img
-            src="https://via.placeholder.com/150x100"
-            alt="Property 6"
-            class="w-36 h-24 object-cover"
-          />
-        </div>
-        <div class="flex justify-center gap-4">
-          <button
-            class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700"
-          >
-            Check Our Review
-          </button>
-          <button
-            class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700"
-          >
-            Get In Touch
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold mb-8">
-          Hector Picon - Clovis' #1 Low Commission Broker!
-        </h2>
-        <div class="bg-blue-900 text-white p-6 rounded-lg max-w-md mx-auto">
-          <p class="mb-2">
-            Understanding Full Agent Services Under 1% Discount Real Estate
-            Brokers
-          </p>
-          <ol class="text-left list-decimal pl-5">
-            <li>1% Listing Fee</li>
-            <li>Internet Marketing</li>
-            <li>Professional Photos & Videography</li>
-            <li>Cancel Your Listing Anytime</li>
-          </ol>
-          <p class="mt-2">
-            This is a true low fee listing with zero hidden or extra
-            charges/fees.
-          </p>
-          <p>
-            Additionally, there are no up-front payments for my services. I only
-            pay my fee at the closing of escrow.
-          </p>
-          <p>
-            I will save you up to 60%+ on the listing side with aggressive
-            front-end pricing!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="bg-blue-900 text-white py-6 sm:py-8 lg:py-12">
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
-      >
-        <div class="text-center sm:text-left">
-          <h3 class="text-lg lg:text-xl font-bold mb-4">Hector Picon</h3>
-          <p class="text-gray-300 text-sm lg:text-base">
-            Clovis' #1 Discount Realtor
-          </p>
-        </div>
-        <div class="text-center sm:text-left">
-          <h3 class="text-lg lg:text-xl font-bold mb-4">Quick Links</h3>
-          <ul class="text-gray-300 space-y-2 text-sm lg:text-base">
-            <li>
-              <a href="#" class="hover:text-white transition-colors">Home</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors">About</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors"
-                >Services</a
+              <button
+                class="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-widest text-slate-950 transition hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                data-cta="sell"
+                type="button"
               >
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="sm:col-span-2 lg:col-span-1">
-          <h3
-            class="text-lg lg:text-xl font-bold mb-4 text-center sm:text-left"
-          >
-            Contact Us
-          </h3>
-          <form class="space-y-3">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-full p-2 sm:p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-sm lg:text-base"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="w-full p-2 sm:p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-sm lg:text-base"
-            />
-            <button
-              type="submit"
-              class="bg-red-600 text-white px-4 py-2 sm:py-3 rounded hover:bg-red-700 w-full sm:w-auto text-sm lg:text-base"
+                List my home
+                <span
+                  aria-hidden="true"
+                  class="transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </button>
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:border-white/40 hover:bg-white/10"
+                data-cta="learn"
+                type="button"
+              >
+                Explore the process
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <span class="block text-2xl font-semibold text-white sm:text-3xl"
+                  >15+</span
+                >
+                <span
+                  class="text-xs uppercase tracking-[0.35em] text-slate-400"
+                  >Years</span
+                >
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <span class="block text-2xl font-semibold text-white sm:text-3xl"
+                  >$600M</span
+                >
+                <span
+                  class="text-xs uppercase tracking-[0.35em] text-slate-400"
+                  >Volume</span
+                >
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <span class="block text-2xl font-semibold text-white sm:text-3xl"
+                  >1%</span
+                >
+                <span
+                  class="text-xs uppercase tracking-[0.35em] text-slate-400"
+                  >Listing fee</span
+                >
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <span class="block text-2xl font-semibold text-white sm:text-3xl"
+                  >98%</span
+                >
+                <span
+                  class="text-xs uppercase tracking-[0.35em] text-slate-400"
+                  >List-to-sale</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="relative flex-1">
+            <div
+              class="absolute inset-x-6 -top-8 -z-10 h-44 rounded-3xl bg-gradient-to-r from-coral via-blush to-ocean opacity-40 blur-3xl"
+            ></div>
+            <div
+              class="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-grid-gradient shadow-glow"
             >
-              Submit
-            </button>
-          </form>
+              <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.35),_rgba(15,23,42,0.85))]"
+              ></div>
+              <div class="relative flex flex-col gap-6 p-8">
+                <div class="flex items-center justify-between">
+                  <div class="text-left">
+                    <p class="text-xs uppercase tracking-[0.38em] text-slate-300">
+                      Featured Listing
+                    </p>
+                    <p class="text-2xl font-semibold text-white">
+                      Skyline Estate
+                    </p>
+                  </div>
+                  <span
+                    class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white"
+                    >Market ready</span
+                  >
+                </div>
+                <div class="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1080&q=80"
+                    alt="Modern home exterior"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <dl class="grid grid-cols-2 gap-4 text-sm text-slate-300">
+                  <div>
+                    <dt
+                      class="text-xs uppercase tracking-[0.35em] text-slate-500"
+                    >
+                      Neighborhood
+                    </dt>
+                    <dd>Clovis North Ridge</dd>
+                  </div>
+                  <div>
+                    <dt
+                      class="text-xs uppercase tracking-[0.35em] text-slate-500"
+                    >
+                      Savings
+                    </dt>
+                    <dd>$24,800 vs 2.5%</dd>
+                  </div>
+                </dl>
+                <button
+                  class="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-white/20"
+                  data-cta="tour"
+                  type="button"
+                >
+                  Request private tour
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="bg-slate-900/60">
+          <div
+            class="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 lg:flex-row lg:px-8"
+          >
+            <div class="flex-1 space-y-6">
+              <span
+                class="text-xs font-semibold uppercase tracking-[0.35em] text-ocean"
+                >The 1% advantage</span
+              >
+              <h2
+                class="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+              >
+                Full-service marketing, zero compromise.
+              </h2>
+              <p class="text-base text-slate-300 sm:text-lg">
+                Every listing is treated like a launch campaign—architected with
+                cinematic video, 3D tours, precision pricing, and negotiation
+                expertise that protects your equity.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="rounded-full border border-ocean/40 bg-ocean/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-ocean"
+                  >Cinematic media</span
+                >
+                <span
+                  class="rounded-full border border-coral/40 bg-coral/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-coral"
+                  >AI staging</span
+                >
+                <span
+                  class="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-white/80"
+                  >Concierge prep</span
+                >
+              </div>
+            </div>
+            <div class="grid flex-1 gap-6 md:grid-cols-2">
+              <article
+                class="rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:border-white/20 hover:bg-white/10"
+              >
+                <div class="mb-6 flex items-center gap-3">
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-lg"
+                    >01</span
+                  >
+                  <h3 class="font-semibold text-white">Strategic launch</h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  Market intelligence drives pricing, narrative, and buyer
+                  targeting. We orchestrate anticipation before listing day hits
+                  the MLS.
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:border-white/20 hover:bg-white/10"
+              >
+                <div class="mb-6 flex items-center gap-3">
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-lg"
+                    >02</span
+                  >
+                  <h3 class="font-semibold text-white">
+                    Immersive storytelling
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  Cinematic video, guided 3D tours, and interactive floor plans
+                  build an emotional case that shortens days on market.
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:border-white/20 hover:bg-white/10"
+              >
+                <div class="mb-6 flex items-center gap-3">
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-lg"
+                    >03</span
+                  >
+                  <h3 class="font-semibold text-white">Negotiation mastery</h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  A disciplined offer strategy and personal representation
+                  ensures you never leave money on the table.
+                </p>
+              </article>
+              <article
+                class="rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:border-white/20 hover:bg-white/10"
+              >
+                <div class="mb-6 flex items-center gap-3">
+                  <span
+                    class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-lg"
+                    >04</span
+                  >
+                  <h3 class="font-semibold text-white">Concierge closing</h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  From disclosures to inspections to escrow, we coordinate every
+                  detail—keeping the process low-friction for your family.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="bg-slate-950">
+          <div class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+            <div
+              class="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between"
+            >
+              <div class="max-w-xl space-y-6">
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-coral"
+                  >Price transparency</span
+                >
+                <h2
+                  class="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+                >
+                  1% vs 2.5% adds up—fast.
+                </h2>
+                <p class="text-base text-slate-300 sm:text-lg">
+                  Real equity protection means keeping six figures in your pocket.
+                  Compare the legacy model to the ZoomRealty approach.
+                </p>
+              </div>
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition hover:bg-white/20"
+                data-cta="schedule"
+                type="button"
+              >
+                Schedule equity audit
+              </button>
+            </div>
+            <div
+              class="mt-12 overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-glow"
+            >
+              <div class="overflow-x-auto">
+                <table class="min-w-full text-left text-sm text-slate-200">
+                  <thead
+                    class="bg-white/10 text-xs uppercase tracking-[0.35em] text-slate-400"
+                  >
+                    <tr>
+                      <th class="px-6 py-4 font-semibold">Sale price</th>
+                      <th class="px-6 py-4 font-semibold">Traditional 2.5%</th>
+                      <th class="px-6 py-4 font-semibold">ZoomRealty 1%</th>
+                      <th class="px-6 py-4 font-semibold text-coral">You keep</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-white/5 text-sm">
+                    <tr>
+                      <td class="px-6 py-5 font-semibold text-white">$500,000</td>
+                      <td class="px-6 py-5">$12,500</td>
+                      <td class="px-6 py-5">$5,000</td>
+                      <td class="px-6 py-5 font-semibold text-emerald-400">
+                        $7,500
+                      </td>
+                    </tr>
+                    <tr class="bg-white/5">
+                      <td class="px-6 py-5 font-semibold text-white">$750,000</td>
+                      <td class="px-6 py-5">$18,750</td>
+                      <td class="px-6 py-5">$7,500</td>
+                      <td class="px-6 py-5 font-semibold text-emerald-400">
+                        $11,250
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-5 font-semibold text-white">
+                        $1,000,000
+                      </td>
+                      <td class="px-6 py-5">$25,000</td>
+                      <td class="px-6 py-5">$10,000</td>
+                      <td class="px-6 py-5 font-semibold text-emerald-400">
+                        $15,000
+                      </td>
+                    </tr>
+                    <tr class="bg-white/5">
+                      <td class="px-6 py-5 font-semibold text-white">
+                        $1,500,000
+                      </td>
+                      <td class="px-6 py-5">$37,500</td>
+                      <td class="px-6 py-5">$15,000</td>
+                      <td class="px-6 py-5 font-semibold text-emerald-400">
+                        $22,500
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-5 font-semibold text-white">
+                        $2,000,000
+                      </td>
+                      <td class="px-6 py-5">$50,000</td>
+                      <td class="px-6 py-5">$20,000</td>
+                      <td class="px-6 py-5 font-semibold text-emerald-400">
+                        $30,000
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="featured" class="bg-slate-900/50">
+          <div class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+            <div
+              class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
+            >
+              <div>
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-ocean"
+                  >Featured homes</span
+                >
+                <h2
+                  class="mt-4 font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+                >
+                  Curated inventory ready for market.
+                </h2>
+                <p class="mt-3 max-w-2xl text-base text-slate-300">
+                  Access exclusive properties before they surface publicly. Each
+                  listing is primed with professional production and buyer
+                  intelligence.
+                </p>
+              </div>
+              <button
+                class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-white transition hover:border-white/40 hover:bg-white/10"
+                data-cta="portfolio"
+                type="button"
+              >
+                View digital portfolio
+              </button>
+            </div>
+            <div class="mt-12 grid gap-6 md:grid-cols-3">
+              <article
+                class="group relative overflow-hidden rounded-3xl border border-white/5 bg-white/5 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80"
+                  alt="Modern home with pool"
+                  class="h-52 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div class="space-y-3 px-6 py-6">
+                  <div
+                    class="flex items-center justify-between text-xs uppercase tracking-[0.32em] text-slate-400"
+                  >
+                    <span>Clovis Foothills</span>
+                    <span>Coming soon</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">
+                    $1.35M • 4 Bed
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    Architect-led upgrades, infinity-edge pool, and panoramic smart
+                    lighting.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="group relative overflow-hidden rounded-3xl border border-white/5 bg-white/5 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80"
+                  alt="Luxury living room"
+                  class="h-52 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div class="space-y-3 px-6 py-6">
+                  <div
+                    class="flex items-center justify-between text-xs uppercase tracking-[0.32em] text-slate-400"
+                  >
+                    <span>Copper River</span>
+                    <span>Active</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">
+                    $980K • 3 Bed
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    Elevated indoor-outdoor flow with Tesla-ready garage and chef's
+                    kitchen.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="group relative overflow-hidden rounded-3xl border border-white/5 bg-white/5 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+                  alt="Home office studio"
+                  class="h-52 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div class="space-y-3 px-6 py-6">
+                  <div
+                    class="flex items-center justify-between text-xs uppercase tracking-[0.32em] text-slate-400"
+                  >
+                    <span>Willow Estates</span>
+                    <span>Under contract</span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">
+                    $1.1M • 5 Bed
+                  </h3>
+                  <p class="text-sm text-slate-300">
+                    Dual office suites, wellness studio, and zero-maintenance
+                    landscaping.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials" class="bg-slate-950">
+          <div class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+            <div class="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+              <div class="space-y-6">
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-blush"
+                  >Social proof</span
+                >
+                <h2
+                  class="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+                >
+                  Reviews that speak louder than billboards.
+                </h2>
+                <p class="text-base text-slate-300 sm:text-lg">
+                  Buyers and sellers alike rely on Hector's clarity, speed, and
+                  ethics. Tap into verified Google, Zillow, and Birdeye results.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <div
+                    class="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-5 py-4"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/google/ffffff"
+                      alt="Google"
+                      class="h-6 w-6"
+                    />
+                    <div>
+                      <p class="text-sm font-semibold text-white">4.9 / 5</p>
+                      <p class="text-xs uppercase tracking-[0.3em] text-slate-400">
+                        Google reviews
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-5 py-4"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/zillow/ffffff"
+                      alt="Zillow"
+                      class="h-6 w-6"
+                    />
+                    <div>
+                      <p class="text-sm font-semibold text-white">Premier Agent</p>
+                      <p class="text-xs uppercase tracking-[0.3em] text-slate-400">
+                        Top-tier badge
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-5 py-4"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/birdeye/ffffff"
+                      alt="Birdeye"
+                      class="h-6 w-6"
+                    />
+                    <div>
+                      <p class="text-sm font-semibold text-white">Elevate Award</p>
+                      <p class="text-xs uppercase tracking-[0.3em] text-slate-400">
+                        Top 1% region
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-5">
+                <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                  <p class="text-sm text-slate-200">
+                    “Hector made the entire process feel like working with a
+                    private wealth advisor. We closed $38k above asking and still
+                    saved on commission.”
+                  </p>
+                  <footer
+                    class="mt-5 text-xs uppercase tracking-[0.32em] text-slate-500"
+                  >
+                    Lindsey &amp; Mark • Clovis North
+                  </footer>
+                </article>
+                <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                  <p class="text-sm text-slate-200">
+                    “From AI staging to drone twilight shoots—our home trended all
+                    week. Hector negotiated three offers within 48 hours.”
+                  </p>
+                  <footer
+                    class="mt-5 text-xs uppercase tracking-[0.32em] text-slate-500"
+                  >
+                    The Patel Family • Fresno High
+                  </footer>
+                </article>
+                <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                  <p class="text-sm text-slate-200">
+                    “We relocated from Austin and needed speed. Hector’s buyer
+                    concierge lined up everything from inspections to move-in
+                    utilities.”
+                  </p>
+                  <footer
+                    class="mt-5 text-xs uppercase tracking-[0.32em] text-slate-500"
+                  >
+                    Elena &amp; Chris • Copper River
+                  </footer>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-slate-900/60">
+          <div class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+              <div>
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-ocean"
+                  >FAQ</span
+                >
+                <h2
+                  class="mt-4 font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+                >
+                  Your questions, answered before you have to ask.
+                </h2>
+                <p class="mt-3 max-w-xl text-base text-slate-300">
+                  Transparency is non-negotiable. Here’s how Hector keeps every
+                  conversation direct, data-backed, and financially sound.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <details
+                  class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-white/20"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-3 px-6 py-5 text-sm font-semibold text-white"
+                  >
+                    How does the 1% listing fee work?
+                    <span class="text-lg text-white/60 transition group-open:rotate-45"
+                      >+</span
+                    >
+                  </summary>
+                  <p class="px-6 pb-6 text-sm text-slate-300">
+                    The 1% fee covers complete concierge listing services. Buyer
+                    agent compensation remains flexible, and you only pay once
+                    escrow closes—no upfront retainers.
+                  </p>
+                </details>
+                <details
+                  class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-white/20"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-3 px-6 py-5 text-sm font-semibold text-white"
+                  >
+                    Can you still help me buy if my home hasn’t sold yet?
+                    <span class="text-lg text-white/60 transition group-open:rotate-45"
+                      >+</span
+                    >
+                  </summary>
+                  <p class="px-6 pb-6 text-sm text-slate-300">
+                    Absolutely. Bridge financing conversations happen early, and
+                    Hector coordinates your sale timeline with your purchase so you
+                    never have to guess.
+                  </p>
+                </details>
+                <details
+                  class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-white/20"
+                >
+                  <summary
+                    class="flex cursor-pointer items-center justify-between gap-3 px-6 py-5 text-sm font-semibold text-white"
+                  >
+                    Do you offer property prep services?
+                    <span class="text-lg text-white/60 transition group-open:rotate-45"
+                      >+</span
+                    >
+                  </summary>
+                  <p class="px-6 pb-6 text-sm text-slate-300">
+                    From concierge cleaning to minor renovations, we project-manage
+                    vendors and can defer costs until closing through preferred
+                    partners.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          class="relative isolate overflow-hidden bg-gradient-to-r from-ocean via-blush to-coral"
+        >
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_rgba(15,23,42,0.7))]"
+          ></div>
+          <div class="relative mx-auto max-w-6xl px-6 py-20 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+              <div class="space-y-6">
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.35em] text-white/60"
+                  >Next move</span
+                >
+                <h2
+                  class="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+                >
+                  Let’s architect your 2025 real estate outcome.
+                </h2>
+                <p class="text-base text-white/80 sm:text-lg">
+                  Request a call, schedule a walkthrough, or ask for a pricing
+                  consult. Hector personally responds within 24 hours.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <div
+                    class="rounded-2xl border border-white/20 bg-white/10 px-5 py-4"
+                  >
+                    <p class="text-sm font-semibold text-white">Call</p>
+                    <p class="text-sm text-white/80">(559) 555-0199</p>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-white/20 bg-white/10 px-5 py-4"
+                  >
+                    <p class="text-sm font-semibold text-white">Visit</p>
+                    <p class="text-sm text-white/80">
+                      Old Town Clovis studio by appointment
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <form
+                class="space-y-4 rounded-3xl border border-white/20 bg-white/10 p-8 shadow-glow"
+                data-form="contact"
+              >
+                <div>
+                  <label
+                    for="name"
+                    class="text-xs uppercase tracking-[0.35em] text-white/70"
+                    >Name</label
+                  >
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="How should we address you?"
+                    class="mt-2 w-full rounded-2xl border border-white/20 bg-white/15 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="text-xs uppercase tracking-[0.35em] text-white/70"
+                    >Email</label
+                  >
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Where should we follow up?"
+                    class="mt-2 w-full rounded-2xl border border-white/20 bg-white/15 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="text-xs uppercase tracking-[0.35em] text-white/70"
+                    >How can we help?</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Tell Hector about your goals, timeline, or property."
+                    class="mt-2 w-full rounded-2xl border border-white/20 bg-white/15 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-widest text-slate-950 transition hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  type="submit"
+                >
+                  Submit inquiry
+                </button>
+                <p class="text-xs text-white/60">
+                  By submitting this form you agree to be contacted regarding your
+                  inquiry. No spam—ever.
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/5 bg-slate-950/80 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr]">
+            <div class="space-y-6">
+              <a href="#hero" class="inline-flex items-center gap-3">
+                <img
+                  src="assets/logo.png"
+                  alt="ZoomRealty logo"
+                  class="h-8 w-auto"
+                />
+                <span class="text-lg font-semibold text-white">ZoomRealty</span>
+              </a>
+              <p class="max-w-sm text-sm text-slate-400">
+                Delivering modern listing strategy, relentless negotiation, and
+                concierge-level service across Clovis and Fresno County.
+              </p>
+              <div
+                class="flex items-center gap-3 text-xs uppercase tracking-[0.32em] text-slate-500"
+              >
+                <span>CalDRE #01945834</span>
+                <span class="h-1 w-1 rounded-full bg-slate-700"></span>
+                <span>© 2025 Hector Picon</span>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h3
+                class="text-sm font-semibold uppercase tracking-[0.35em] text-white"
+              >
+                Explore
+              </h3>
+              <nav class="flex flex-col gap-3 text-sm text-slate-300">
+                <a class="transition hover:text-white" href="#experience"
+                  >Experience</a
+                >
+                <a class="transition hover:text-white" href="#how-it-works"
+                  >1% Advantage</a
+                >
+                <a class="transition hover:text-white" href="#featured"
+                  >Featured homes</a
+                >
+                <a class="transition hover:text-white" href="#testimonials"
+                  >Reviews</a
+                >
+                <a class="transition hover:text-white" href="#contact">Contact</a>
+              </nav>
+            </div>
+            <div class="space-y-4">
+              <h3
+                class="text-sm font-semibold uppercase tracking-[0.35em] text-white"
+              >
+                Stay ahead
+              </h3>
+              <p class="text-sm text-slate-400">
+                Receive quarterly market intelligence tailored to your neighborhood.
+              </p>
+              <form class="flex flex-col gap-3 sm:flex-row" data-form="newsletter">
+                <input
+                  type="email"
+                  name="newsletter-email"
+                  placeholder="Email address"
+                  class="w-full rounded-full border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/40"
+                  required
+                />
+                <button
+                  class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold uppercase tracking-widest text-slate-950 transition hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  type="submit"
+                >
+                  Join
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="mt-12 border-t border-white/5 pt-6 text-xs text-slate-500"
+          >
+            Privacy-first communications. Your data never leaves ZoomRealty.
+          </div>
         </div>
-      </div>
-      <div class="border-t border-blue-800 mt-6 sm:mt-8 pt-4 sm:pt-6">
-        <p class="text-center text-gray-300 text-xs sm:text-sm">
-          © 2025 Hector Picon. All rights reserved.
-        </p>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
